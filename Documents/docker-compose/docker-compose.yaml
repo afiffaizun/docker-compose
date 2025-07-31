@@ -1,0 +1,4 @@
+services:
+    nginx-1:
+        container_name: nginx-ku1
+        build: .
