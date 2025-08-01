@@ -8,6 +8,9 @@ services:
                 - VERSION=1.1.1
         ports:
             - 8080:80
+        environment:
+            - SPEED=90
+            - RATE_LIMIT=true
     
     nodejs:
         container_name: node-ku

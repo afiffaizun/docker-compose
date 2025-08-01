@@ -7,7 +7,9 @@ RUN npm install
 
 COPY . .
 
-ENTRYPOINT [ "node", "index.js"]
+ENTRYPOINT [ "node"]
+
+CMD ["index.js"]
 
 
 EXPOSE 3000
