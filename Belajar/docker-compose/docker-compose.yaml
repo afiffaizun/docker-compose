@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+#   nginx:
+#     container_name: nginx-ku
+#     image: nginx:alpine
+#     ports:
+#       - 8080:80
+#     command: ["sh", "-c", "echo 'nginx dari array style 1' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"]
+
+#   nginx2:
+#     container_name: nginx-ku2
+#     image: nginx:alpine
+#     ports:
+#       - 8081:80
+#     command: ["sh", "-c", "echo 'nginx dari array 2 mantap' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"]
+  test-onfailure:
+    container_name: test-onfailure
+    image: alpine
+    restart: on-failure
+    command:
+      - /bin/sh
+      - -c
+      - |
+        sleep 10
+        exit 1
+

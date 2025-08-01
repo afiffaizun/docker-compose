@@ -1,0 +1,21 @@
+services:
+    nginx-1:
+        container_name: nginx-ku1
+        build: 
+            context: ./docker/nginx
+            dockerfile: Dockerfile.staging
+            args:
+                - VERSION=1.1.1
+        ports:
+            - 8080:80
+        environment:
+            - SPEED=90
+            - RATE_LIMIT=true
+    
+    nodejs:
+        container_name: node-ku
+        build: 
+            context: ./docker/nodejs
+            dockerfile: Dockerfile.staging
+        ports:
+            - 3000:3000
